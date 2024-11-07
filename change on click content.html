@@ -1,0 +1,147 @@
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="some what ever ">
+		<meta name="description" content="Whatever put here">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<section>
+			<div class="container">
+				<header>
+					<nav>
+						<a href=""><img src="https://capp.nicepage.com/77ee41be1fbee66c320377788405b32b51a73e3e/images/default-logo.png"></a>
+						<ul class="menu">
+							<a href="#"><li> Home </li></a>
+							<a href="#"><li> About </li></a>
+							<a href="#"><li> Service </li></a>
+							<a href="#"><li> Project </li></a>
+							<a href="#"><li> Contact US </li></a>
+
+						</ul>
+					</nav>
+				</header>
+			</div>
+		</section>
+
+		<section class="hero_banner">
+			<div class="container">
+				<div class="hero">
+					<h1>In Business Solutions</h1>
+					<p>we are experts</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-4">
+						<div class="box">
+							<a href="#"><i class="fa fa-facebook-f"></i></a>
+							<h4>Advisory</h4>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="box">
+							<a href="#"><i class="fa fa-facebook-f"></i></a>
+							<h4>Advisory</h4>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="box">
+							<a href="#"><i class="fa fa-facebook-f"></i></a>
+							<h4>Advisory</h4>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="box">
+							<a href="#"><i class="fa fa-facebook-f"></i></a>
+							<h4>Advisory</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-2">
+						<article   id="new" class="tab-content">
+							<img src="img/aircraft.jpg">
+							<p>Some of these elements include style, title, base, link, script, and meta. In HTML 5, these elements are collectively known as HTML Head Elements. After the closing head tag is the  opening and closing body tags. ... The following example contains all the basic elements you need to create an HTML 5 page.
+							</p>
+						</article>
+						<article  id="everyday" class="tab-content">
+							<img src="img/reader.jpeg">
+							<p>1 of these elements include style, title, base, link, script, and meta. In HTML 5, these elements are collectively known as HTML Head Elements. After the closing head tag is the  opening and closing body tags. ... The following example contains all the basic elements you need to create an HTML 5 page.
+							</p>
+						</article>
+						<article   id="things" class="tab-content">
+							<img src="img/scenery.jpg">
+							<p>2 of these elements include style, title, base, link, script, and meta. In HTML 5, these elements are collectively known as HTML Head Elements. After the closing head tag is the  opening and closing body tags. ... The following example contains all the basic elements you need to create an HTML 5 page.
+							</p>
+						</article>
+						<article id="book" class="tab-content">
+							<img src="img/book.jpg">
+							<p>3 of these elements include style, title, base, link, script, and meta. In HTML 5, these elements are collectively known as HTML Head Elements. After the closing head tag is the  opening and closing body tags. ... The following example contains all the basic elements you need to create an HTML 5 page.
+							</p>
+						</article>
+						<article  id="fly" class="tab-content">
+							<img src="img/fly.jpg">
+							<p>4 of these elements include style, title, base, link, script, and meta. In HTML 5, these elements are collectively known as HTML Head Elements. After the closing head tag is the  opening and closing body tags. ... The following example contains all the basic elements you need to create an HTML 5 page.
+							</p>
+						</article>
+					</div>
+					<div class="col-2">
+						<aside  class="nav">
+							<ul>
+								<li><a href="#new">New</a></li>
+								<li><a href="#things">Things</a></li>
+								<li><a href="#everyday">Everyday</a></li>
+								<li><a href="#book">Books</a></li>
+								<li><a href="#learn">Learn</a></li>
+								<li><a href="#fly" >Fly</a></li>
+							</ul>
+						</aside>
+					</div>
+				</div>
+			</div>
+			<section>
+
+				<footer>
+					<div class="container">
+						<div class="col-3">
+							<h4>About Company</h4>
+						</div>
+						<div class="col-3">
+							<h4>About Company</h4>
+						</div>
+						<div class="col-3">
+							<h4>About Company</h4>
+						</div>
+
+					</div>
+				</footer>
+			</body>
+		<script>
+$(document).ready(function () {
+    $('.nav ul li:first').addClass('active');
+    $('.tab-content:not(:first)').hide();
+    $('.nav ul li a').click(function (event) {
+        event.preventDefault();
+        var content = $(this).attr('href');
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+        $(content).show();
+        $(content).siblings('.tab-content').hide();
+    });
+});
+</script>
+</html>	

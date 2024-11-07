@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Tabs</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+/* Hide all tab content by default */
+.tabs, .tabcontent{
+    margin: auto;
+}
+
+.tabcontent {
+  display: none;
+}
+
+/* Style the tab buttons */
+.tablink {
+  background-color: #f2f2f2;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.tablink:hover {
+  background-color: #0F76BD;
+}
+
+/* Style the active tab */
+.active {
+  background-color: #0F76BD;
+  color: #ddd;
+}
+
+/* Slide animation for mobile view */
+@media screen and (max-width: 768px) {
+  .tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .tablink {
+    display: inline-block;
+  }
+}
+
+.tab_content_wrapper {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 10px; /* Add spacing between image and text */
+}
+
+.tab_img {
+  display: inline-block;
+  border: 1px solid green;
+  margin-right: 15px;
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px;
+}
+
+.tab_text {
+  flex: 1; /* Take remaining space */
+  word-wrap: break-word; /* Wrap long words */
+}
+
+    </style>
+</head>
+<body>
+    <div class="page-width">
+    <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'Tab1')">Ingredients Spotlight	</button>
+        <button class="tablink" onclick="openTab(event, 'Tab2')">How to use	</button>
+        <button class="tablink" onclick="openTab(event, 'Tab3')">Suitable For	</button>
+        <button class="tablink" onclick="openTab(event, 'Tab4')">	Patch TesT		</button>
+      </div>
+      
+      <div id="Tab1" class="tabcontent">
+        <h3>Ingredients Spotlight</h3>
+        <div class="tab_content_wrapper">
+          <img src="https://images.thedermaco.com/catalog/product/SC1.PNG" class="tab_img">
+          <p class="tab_text"><b>Salicylic Acid</b> Salicylic Acid is a keratolytic agent that exfoliates skin cells to slough off more readily. It’s a BHA that targets enlarged pores, acne, & blackheads.</p>
+        </div>
+        <div class="tab_content_wrapper">
+            <img src="https://images.thedermaco.com/catalog/product/SC1.PNG" class="tab_img">
+            <p class="tab_text"><b>Salicylic Acid</b> Salicylic Acid is a keratolytic agent that exfoliates skin cells to slough off more readily. It’s a BHA that targets enlarged pores, acne, & blackheads.</p>
+          </div>
+          <div class="tab_content_wrapper">
+            <img src="https://images.thedermaco.com/catalog/product/SC1.PNG" class="tab_img">
+            <p class="tab_text"><b>Salicylic Acid</b> Salicylic Acid is a keratolytic agent that exfoliates skin cells to slough off more readily. It’s a BHA that targets enlarged pores, acne, & blackheads.</p>
+          </div>
+      </div>
+      
+      <div id="Tab2" class="tabcontent">
+        <h3>Well Know How to use</h3>
+        <div class="tab_content_wrapper">
+            <img src="https://images.thedermaco.com/catalog/product/dots_1_2.png" class="tab_img">
+            <p class="tab_text"><b>Step 1</b>                Use an adequate amount of face wash. Massage, rinse & pat dry</p>
+          </div>
+          <div class="tab_content_wrapper">
+            <img src="https://images.thedermaco.com/catalog/product/dots_1_2.png" class="tab_img">
+            <p class="tab_text"><b>Step 2</b>                Use an adequate amount of face wash. Massage, rinse & pat dry</p>
+          </div>
+          <div class="tab_content_wrapper">
+            <img src="https://images.thedermaco.com/catalog/product/dots_1_2.png" class="tab_img">
+            <p class="tab_text"><b>Step 3</b>                Use an adequate amount of face wash. Massage, rinse & pat dry</p>
+          </div>
+          <div class="tab_content_wrapper">
+            <img src="https://images.thedermaco.com/catalog/product/dots_1_2.png" class="tab_img">
+            <p class="tab_text"><b>Step 4</b>                Use an adequate amount of face wash. Massage, rinse & pat dry</p>
+          </div>
+      </div>
+      
+      <div id="Tab3" class="tabcontent">
+        <h3>Suitable For</h3>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+        
+      </div>
+      
+
+      <div id="Tab4" class="tabcontent">
+        <h3>Patch TesT</h3>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+        <p>This is the content for Tab 3.</p>
+      </div>
+    </div>
+
+  <script>
+  function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  
+  // Hide all tab content
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  
+  // Deactivate all tab buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+  
+  // Show the specific tab content
+  document.getElementById(tabName).style.display = "block";
+  
+  // Activate the clicked tab button
+  evt.currentTarget.classList.add("active");
+}
+
+// Open the first tab by default
+document.querySelector('.tablink').click();
+
+
+  </script>
+</body>
+</html>
